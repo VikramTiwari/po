@@ -8,6 +8,32 @@ var config = {
 };
 firebase.initializeApp(config);
 
+// ======= Storage ======== //
+// Get a reference to the storage service, which is used to create references in your storage bucket
+var storage = firebase.storage();
+
+// Create a storage reference from our storage service
+var storageRef = storage.ref();
+
+// Create a child reference
+var imagesRef = storageRef.child('images');
+// imagesRef now points to 'images'
+
+// Child references can also take paths delimited by '/'
+var spaceRef = storageRef.child('images/space.jpg');
+// spaceRef now points to "images/space.jpg"
+// imagesRef still points to "images"
+// Reference's path is: 'images/space.jpg'
+// This is analogous to a file path on disk
+console.log(spaceRef.fullPath);
+
+// Reference's name is the last segment of the full path: 'space.jpg'
+// This is analogous to the file name
+console.log(spaceRef.name);
+
+// Reference's bucket is the name of the storage bucket where files are stored
+console.log(spaceRef.bucket);
+
 // ========== Database ============= //
 var database = firebase.database();
 document.getElementById("writeUserData").addEventListener('click', writeUserData);
@@ -17,7 +43,7 @@ function writeUserData() {
   firebase.database().ref('test/' + userId).set({
     username: name,
     email: email,
-    profile_picture : imageUrl
+    profile_picture: imageUrl
   });
 }
 
