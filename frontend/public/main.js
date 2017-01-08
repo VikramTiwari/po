@@ -8,6 +8,20 @@ var config = {
 };
 firebase.initializeApp(config);
 
+// ========== Database ============= //
+var database = firebase.database();
+document.getElementById("writeUserData").addEventListener('click', writeUserData);
+
+function writeUserData() {
+  var userId = name = email = imageUrl = 1;
+  firebase.database().ref('test/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
+
+
 // ======== Authentication ========= //
 document.getElementById("authenticate").addEventListener('click', authenticate);
 document.getElementById("logout").addEventListener('click', signOut)
@@ -57,11 +71,10 @@ function getRedirectResult() {
     // ...
   });
 }
-
 getRedirectResult()
 
+// ======= Messaging ========== //
 function notifications() {
-  // ======= Messaging ========== //
   // use messaging feature
   const messaging = firebase.messaging()
     // requestPermission to send messages
@@ -85,5 +98,4 @@ function notifications() {
   })
 
 }
-
-// notifications();
+notifications();
