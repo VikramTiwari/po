@@ -1,0 +1,3 @@
+- Walk extra mile for the user
+- Keep it simple, silly
+- Be modular
