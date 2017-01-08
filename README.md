@@ -3,6 +3,14 @@ Project Overview
 
 Upcoming shortly!
 
+Start Running
+=============
+
+- Clone project: `git clone https://github.com/VikramTiwari/po.git && cd po`
+- Install dependencies: `yarn`
+- Run locally: `yarn start`
+- Deploy: `yarn run deploy`
+
 
 Components:
 Firebase Messaging Service

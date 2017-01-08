@@ -1,6 +1,7 @@
 {
   "scripts":{
-    "start": "cd frontend && firebase serve"
+    "start": "cd frontend && firebase serve",
+    "deploy": "cd frontend && firebase deploy"
   },
   "dependencies": {
     "firechat": "^3.0.1"
