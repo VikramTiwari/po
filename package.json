@@ -1,0 +1,8 @@
+{
+  "scripts":{
+    "start": "cd frontend && firebase serve"
+  },
+  "dependencies": {
+    "firechat": "^3.0.1"
+  }
+}
