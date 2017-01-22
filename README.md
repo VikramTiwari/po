@@ -12,6 +12,14 @@ Start Running
 - Run locally: `yarn start`
 - Deploy: `yarn run deploy`
 
+Backend
+=======
+Built using top of cloud functions
+
+Create staging Bucket
+```
+gsutil mb gs://ivikramtiwari-fn
+```
 
 Components:
 Firebase Messaging Service
