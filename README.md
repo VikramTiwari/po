@@ -8,6 +8,7 @@ Start Running
 
 - Clone project: `git clone https://github.com/VikramTiwari/po.git && cd po`
 - Install dependencies: `yarn`
+- Update `frontend/scripts/config.template.js` with your configurations and rename file to `config.js`
 - Run locally: `yarn start`
 - Deploy: `yarn run deploy`
 
