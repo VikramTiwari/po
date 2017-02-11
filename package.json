@@ -1,7 +1,10 @@
 {
-  "scripts":{
+  "scripts": {
     "start": "cd frontend && firebase serve",
     "deploy": "cd frontend && firebase deploy"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
 }

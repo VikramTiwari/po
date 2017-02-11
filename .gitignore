@@ -2,3 +2,4 @@
 node_modules
 frontend/scripts/config.js
 backend/functions/echoFirebase/serviceAccountKey.json
+.vscode
