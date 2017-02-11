@@ -68,7 +68,13 @@ FriendlyChat.prototype.initFirebase = function() {
 // Loads chat messages history and listens for upcoming ones.
 FriendlyChat.prototype.loadMessages = function() {
   // Reference to the /messages/ database path.
-  this.messagesRef = this.database.ref('messages');
+  // getting userId from the authenticated user's data
+  // using email id so that communications made by the same user are common through diffrent login methods
+  // removing . since firebase does not allows that in reference names
+  // TODO: Is this the correct way? Will this mean that there could be a possible case of duplicacy?
+  // ANS: Could happen.
+  this.userId = this.auth.currentUser.email.replace('.', '')
+  this.messagesRef = this.database.ref('users/'+ this.userId +'/messages');
   // Make sure we remove all previous listeners.
   this.messagesRef.off();
 
